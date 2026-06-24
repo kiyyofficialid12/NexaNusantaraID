@@ -1,6 +1,4 @@
-0plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
 
 android {
     namespace 'com.nexa.nusantara'
@@ -14,12 +12,10 @@ android {
         versionName "1.0"
     }
 
-
     buildFeatures {
-        buildConfig = true
-   }
+        buildConfig true
+    }
 
- 
     flavorDimensions "default"
     productFlavors {
         admin {
@@ -40,6 +36,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
