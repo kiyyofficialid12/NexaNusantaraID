@@ -1,3 +1,38 @@
+git add .github/workflows/build.yml
+git commit -m "switch to debug builds for automatic signing"
+git push origin mai#!/bin/bash
+# ============================================================
+# SIGN & INSTALL NEXA APK — LANGSUNG DARI TERMUX
+# ============================================================
+
+# 1. Setup folder
+mkdir -p ~/nexa-apk
+cd ~/nexa-apk
+
+# 2. Download APK unsigned dari GitHub (ganti URL dengan artifact lo)
+# Ganti URL di bawah dengan link download artifact yang lo dapat dari Actions
+# Contoh: URL download dari GitHub (lo bisa ambil dari artifacts)
+# Atau kalau APK udah ada di HP, lo bisa copy ke folder ini pake 'cp'
+
+# Karena lo udah punya file zip di Download, kita copy dari situ
+cp /storage/emulated/0/Download/Nexa-Admin-APK.zip .
+unzip -o Nexa-Admin-APK.zip
+mv app-admin-release-unsigned.apk NexaAdmin-unsigned.apk
+
+# 3. Download uber-apk-signer (tool signing)
+wget -O uber-apk-signer.jar https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3.0/uber-apk-signer-1.3.0.jar
+
+# 4. Sign APK (debug key)
+java -jar uber-apk-signer.jar -a NexaAdmin-unsigned.apk --out signed/
+
+# 5. Install APK yang sudah signed
+adb install signed/NexaAdmin-unsigned-aligned-debugSigned.apk
+
+# Atau kalau gak pake adb, lo bisa install langsung dari file manager
+# Tapi Termux biasanya bisa pake 'pm install'
+pm install signed/NexaAdmin-unsigned-aligned-debugSigned.apk
+
+echo "✅ APK berhasil di-sign dan diinstall!"n
 name: Build Nexa APK (Admin + Target)
 
 on:
