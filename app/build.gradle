@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.nexa.nusantara'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.nexa.nusantara"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        admin {
+            applicationId "com.nexa.nusantara.admin"
+            versionName "1.0-admin"
+            buildConfigField "boolean", "IS_ADMIN", "true"
+        }
+        target {
+            applicationId "com.nexa.nusantara"
+            versionName "1.0"
+            buildConfigField "boolean", "IS_ADMIN", "false"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+}

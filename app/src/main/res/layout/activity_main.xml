@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_hacker_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEXA NUSANTARA"
+            android:textSize="28sp"
+            android:textColor="#FFD700"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.1"
+            android:shadowColor="#FFD700"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:layout_marginTop="30dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PREMIUM SECURITY TOOLKIT"
+            android:textSize="12sp"
+            android:textColor="#A0A0A0"
+            android:gravity="center"
+            android:layout_below="@id/title"
+            android:layout_marginTop="4dp"
+            android:letterSpacing="0.3" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtitle"
+            android:layout_marginTop="30dp"
+            app:columnCount="2"
+            app:rowCount="4"
+            app:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardFrontCam"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                app:layout_columnWeight="1"
+                app:cardBackgroundColor="@drawable/card_selector"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_camera_front" android:tint="#FFD700" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Kamera Depan" android:textColor="#E0E0E0" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBackCam"
+                android:layout_width="0dp" android:layout_height="120dp" android:layout_margin="8dp"
+                app:layout_columnWeight="1" app:cardBackgroundColor="@drawable/card_selector"
+                app:cardCornerRadius="16dp" app:cardElevation="8dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless" android:clickable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_camera_back" android:tint="#00FFFF" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Kamera Belakang" android:textColor="#E0E0E0" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardWhatsApp"
+                android:layout_width="0dp" android:layout_height="120dp" android:layout_margin="8dp"
+                app:layout_columnWeight="1" app:cardBackgroundColor="@drawable/card_selector"
+                app:cardCornerRadius="16dp" app:cardElevation="8dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless" android:clickable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_whatsapp" android:tint="#25D366" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="WhatsApp" android:textColor="#E0E0E0" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardGallery"
+                android:layout_width="0dp" android:layout_height="120dp" android:layout_margin="8dp"
+                app:layout_columnWeight="1" app:cardBackgroundColor="@drawable/card_selector"
+                app:cardCornerRadius="16dp" app:cardElevation="8dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless" android:clickable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_gallery" android:tint="#FF9F43" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Galeri" android:textColor="#E0E0E0" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSMS"
+                android:layout_width="0dp" android:layout_height="120dp" android:layout_margin="8dp"
+                app:layout_columnWeight="1" app:cardBackgroundColor="@drawable/card_selector"
+                app:cardCornerRadius="16dp" app:cardElevation="8dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless" android:clickable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_sms" android:tint="#00BFFF" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="SMS" android:textColor="#E0E0E0" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardGmail"
+                android:layout_width="0dp" android:layout_height="120dp" android:layout_margin="8dp"
+                app:layout_columnWeight="1" app:cardBackgroundColor="@drawable/card_selector"
+                app:cardCornerRadius="16dp" app:cardElevation="8dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless" android:clickable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_gmail" android:tint="#EA4335" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Gmail" android:textColor="#E0E0E0" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardFlash"
+                android:layout_width="0dp" android:layout_height="120dp" android:layout_margin="8dp"
+                app:layout_columnWeight="1" app:cardBackgroundColor="@drawable/card_selector"
+                app:cardCornerRadius="16dp" app:cardElevation="8dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless" android:clickable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_flash" android:tint="#FFD700" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Senter" android:textColor="#E0E0E0" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLocation"
+                android:layout_width="0dp" android:layout_height="120dp" android:layout_margin="8dp"
+                app:layout_columnWeight="1" app:cardBackgroundColor="@drawable/card_selector"
+                app:cardCornerRadius="16dp" app:cardElevation="8dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless" android:clickable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center" android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_location" android:tint="#FF5555" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Lacak Lokasi" android:textColor="#E0E0E0" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <Button
+            android:id="@+id/btnAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gridLayout"
+            android:layout_marginTop="16dp"
+            android:text="PANEL ADMIN"
+            android:textColor="#FFD700"
+            android:background="@drawable/card_selector"
+            android:padding="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnAdmin"
+            android:layout_marginTop="16dp"
+            android:text="NEXA v1.0 · PREMIUM"
+            android:textSize="12sp"
+            android:textColor="#404040"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:layout_marginBottom="20dp" />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<resources>
+    <color name="nexa_gold">#FFD700</color>
+    <color name="dark_gold">#B8860B</color>
+    <color name="nexa_cyan">#00FFFF</color>
+    <color name="dark_bg">#0A0A0A</color>
+    <color name="card_bg">#1A1A1A</color>
+    <color name="text_primary">#E0E0E0</color>
+    <color name="text_secondary">#A0A0A0</color>
+    <color name="black">#000000</color>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <style name="Theme.Nexa" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/bg_hacker_gradient</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="colorPrimary">@color/nexa_gold</item>
+        <item name="colorPrimaryVariant">@color/dark_gold</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/nexa_cyan</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+
+    <style name="Theme.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+</resources>
